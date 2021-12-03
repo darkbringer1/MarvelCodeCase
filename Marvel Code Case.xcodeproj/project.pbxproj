@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D83CA772275A24D7006B4E32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA771275A24D7006B4E32 /* AppDelegate.swift */; };
 		D83CA774275A24D7006B4E32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA773275A24D7006B4E32 /* SceneDelegate.swift */; };
 		D83CA776275A24D7006B4E32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA775275A24D7006B4E32 /* ViewController.swift */; };
 		D83CA77C275A24D7006B4E32 /* Marvel_Code_Case.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D83CA77A275A24D7006B4E32 /* Marvel_Code_Case.xcdatamodeld */; };
@@ -26,6 +25,10 @@
 		D83CA7C2275A4887006B4E32 /* CharacterListServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA7C1275A4887006B4E32 /* CharacterListServiceProvider.swift */; };
 		D83CA7C4275A4894006B4E32 /* CharacterDetailServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA7C3275A4894006B4E32 /* CharacterDetailServiceProvider.swift */; };
 		D83CA7C7275A48A5006B4E32 /* EndpointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA7C6275A48A5006B4E32 /* EndpointManager.swift */; };
+		D83CA7CB275A4DD3006B4E32 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA7CA275A4DD3006B4E32 /* MainViewController.swift */; };
+		D83CA7CD275A4DF8006B4E32 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA7CC275A4DF8006B4E32 /* MainViewModel.swift */; };
+		D83CA7D0275A4E12006B4E32 /* MainViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA7CF275A4E12006B4E32 /* MainViewBuilder.swift */; };
+		D83CA7D2275A509E006B4E32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA7D1275A509E006B4E32 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +50,6 @@
 
 /* Begin PBXFileReference section */
 		D83CA76E275A24D7006B4E32 /* Marvel Code Case.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel Code Case.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D83CA771275A24D7006B4E32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D83CA773275A24D7006B4E32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D83CA775275A24D7006B4E32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D83CA77B275A24D7006B4E32 /* Marvel_Code_Case.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Marvel_Code_Case.xcdatamodel; sourceTree = "<group>"; };
@@ -69,6 +71,10 @@
 		D83CA7C1275A4887006B4E32 /* CharacterListServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListServiceProvider.swift; sourceTree = "<group>"; };
 		D83CA7C3275A4894006B4E32 /* CharacterDetailServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailServiceProvider.swift; sourceTree = "<group>"; };
 		D83CA7C6275A48A5006B4E32 /* EndpointManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointManager.swift; sourceTree = "<group>"; };
+		D83CA7CA275A4DD3006B4E32 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D83CA7CC275A4DF8006B4E32 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		D83CA7CF275A4E12006B4E32 /* MainViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewBuilder.swift; sourceTree = "<group>"; };
+		D83CA7D1275A509E006B4E32 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,12 +127,14 @@
 		D83CA770275A24D7006B4E32 /* Marvel Code Case */ = {
 			isa = PBXGroup;
 			children = (
+				D83CA7D3275A50F0006B4E32 /* New Group */,
 				D83CA7C5275A489C006B4E32 /* Utilities */,
 				D83CA7BD275A47ED006B4E32 /* Models */,
 				D83CA7AC275A3399006B4E32 /* DataOperations */,
-				D83CA771275A24D7006B4E32 /* AppDelegate.swift */,
+				D83CA7C9275A4DC1006B4E32 /* Scenes */,
 				D83CA773275A24D7006B4E32 /* SceneDelegate.swift */,
 				D83CA775275A24D7006B4E32 /* ViewController.swift */,
+				D83CA7D1275A509E006B4E32 /* AppDelegate.swift */,
 				D83CA77D275A24D9006B4E32 /* Assets.xcassets */,
 				D83CA77F275A24D9006B4E32 /* LaunchScreen.storyboard */,
 				D83CA782275A24D9006B4E32 /* Info.plist */,
@@ -221,6 +229,23 @@
 				D83CA7C6275A48A5006B4E32 /* EndpointManager.swift */,
 			);
 			path = EndointManager;
+			sourceTree = "<group>";
+		};
+		D83CA7C9275A4DC1006B4E32 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D83CA7CA275A4DD3006B4E32 /* MainViewController.swift */,
+				D83CA7CC275A4DF8006B4E32 /* MainViewModel.swift */,
+				D83CA7CF275A4E12006B4E32 /* MainViewBuilder.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D83CA7D3275A50F0006B4E32 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,13 +390,16 @@
 				D83CA7BF275A47FE006B4E32 /* PaginationInfo.swift in Sources */,
 				D83CA7C4275A4894006B4E32 /* CharacterDetailServiceProvider.swift in Sources */,
 				D83CA776275A24D7006B4E32 /* ViewController.swift in Sources */,
+				D83CA7CD275A4DF8006B4E32 /* MainViewModel.swift in Sources */,
 				D83CA77C275A24D7006B4E32 /* Marvel_Code_Case.xcdatamodeld in Sources */,
-				D83CA772275A24D7006B4E32 /* AppDelegate.swift in Sources */,
+				D83CA7D0275A4E12006B4E32 /* MainViewBuilder.swift in Sources */,
+				D83CA7CB275A4DD3006B4E32 /* MainViewController.swift in Sources */,
 				D83CA7C2275A4887006B4E32 /* CharacterListServiceProvider.swift in Sources */,
 				D83CA7B7275A3C68006B4E32 /* CharacterDataRequest.swift in Sources */,
 				D83CA774275A24D7006B4E32 /* SceneDelegate.swift in Sources */,
 				D83CA7B4275A3A3D006B4E32 /* CharacterDataResponse.swift in Sources */,
 				D83CA7BA275A3F68006B4E32 /* CharacterDetailRequest.swift in Sources */,
+				D83CA7D2275A509E006B4E32 /* AppDelegate.swift in Sources */,
 				D83CA7C7275A48A5006B4E32 /* EndpointManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
