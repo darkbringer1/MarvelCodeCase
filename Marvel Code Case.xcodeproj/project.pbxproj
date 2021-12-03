@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,17 @@
 		D83CA781275A24D9006B4E32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D83CA77F275A24D9006B4E32 /* LaunchScreen.storyboard */; };
 		D83CA78C275A24D9006B4E32 /* Marvel_Code_CaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA78B275A24D9006B4E32 /* Marvel_Code_CaseTests.swift */; };
 		D83CA797275A24DA006B4E32 /* Marvel_Code_CaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA796275A24DA006B4E32 /* Marvel_Code_CaseUITests.swift */; };
+		D83CA7A8275A2885006B4E32 /* BaseComponents in Frameworks */ = {isa = PBXBuildFile; productRef = D83CA7A7275A2885006B4E32 /* BaseComponents */; };
+		D83CA7AB275A2892006B4E32 /* DefaultNetworkOperationPackage in Frameworks */ = {isa = PBXBuildFile; productRef = D83CA7AA275A2892006B4E32 /* DefaultNetworkOperationPackage */; };
+		D83CA7AF275A33AD006B4E32 /* AccessProviderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA7AE275A33AD006B4E32 /* AccessProviderManager.swift */; };
+		D83CA7B1275A38B5006B4E32 /* AccessProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA7B0275A38B5006B4E32 /* AccessProviderProtocol.swift */; };
+		D83CA7B4275A3A3D006B4E32 /* CharacterDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA7B3275A3A3D006B4E32 /* CharacterDataResponse.swift */; };
+		D83CA7B7275A3C68006B4E32 /* CharacterDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA7B6275A3C68006B4E32 /* CharacterDataRequest.swift */; };
+		D83CA7BA275A3F68006B4E32 /* CharacterDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA7B9275A3F68006B4E32 /* CharacterDetailRequest.swift */; };
+		D83CA7BF275A47FE006B4E32 /* PaginationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA7BE275A47FE006B4E32 /* PaginationInfo.swift */; };
+		D83CA7C2275A4887006B4E32 /* CharacterListServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA7C1275A4887006B4E32 /* CharacterListServiceProvider.swift */; };
+		D83CA7C4275A4894006B4E32 /* CharacterDetailServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA7C3275A4894006B4E32 /* CharacterDetailServiceProvider.swift */; };
+		D83CA7C7275A48A5006B4E32 /* EndpointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA7C6275A48A5006B4E32 /* EndpointManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +60,15 @@
 		D83CA792275A24DA006B4E32 /* Marvel Code CaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Marvel Code CaseUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D83CA796275A24DA006B4E32 /* Marvel_Code_CaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marvel_Code_CaseUITests.swift; sourceTree = "<group>"; };
 		D83CA798275A24DA006B4E32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D83CA7AE275A33AD006B4E32 /* AccessProviderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessProviderManager.swift; sourceTree = "<group>"; };
+		D83CA7B0275A38B5006B4E32 /* AccessProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessProviderProtocol.swift; sourceTree = "<group>"; };
+		D83CA7B3275A3A3D006B4E32 /* CharacterDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDataResponse.swift; sourceTree = "<group>"; };
+		D83CA7B6275A3C68006B4E32 /* CharacterDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDataRequest.swift; sourceTree = "<group>"; };
+		D83CA7B9275A3F68006B4E32 /* CharacterDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailRequest.swift; sourceTree = "<group>"; };
+		D83CA7BE275A47FE006B4E32 /* PaginationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationInfo.swift; sourceTree = "<group>"; };
+		D83CA7C1275A4887006B4E32 /* CharacterListServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListServiceProvider.swift; sourceTree = "<group>"; };
+		D83CA7C3275A4894006B4E32 /* CharacterDetailServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailServiceProvider.swift; sourceTree = "<group>"; };
+		D83CA7C6275A48A5006B4E32 /* EndpointManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D83CA7AB275A2892006B4E32 /* DefaultNetworkOperationPackage in Frameworks */,
+				D83CA7A8275A2885006B4E32 /* BaseComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +121,9 @@
 		D83CA770275A24D7006B4E32 /* Marvel Code Case */ = {
 			isa = PBXGroup;
 			children = (
+				D83CA7C5275A489C006B4E32 /* Utilities */,
+				D83CA7BD275A47ED006B4E32 /* Models */,
+				D83CA7AC275A3399006B4E32 /* DataOperations */,
 				D83CA771275A24D7006B4E32 /* AppDelegate.swift */,
 				D83CA773275A24D7006B4E32 /* SceneDelegate.swift */,
 				D83CA775275A24D7006B4E32 /* ViewController.swift */,
@@ -128,6 +153,76 @@
 			path = "Marvel Code CaseUITests";
 			sourceTree = "<group>";
 		};
+		D83CA7AC275A3399006B4E32 /* DataOperations */ = {
+			isa = PBXGroup;
+			children = (
+				D83CA7C0275A487A006B4E32 /* Services */,
+				D83CA7AD275A339F006B4E32 /* AccessProviderManager */,
+			);
+			path = DataOperations;
+			sourceTree = "<group>";
+		};
+		D83CA7AD275A339F006B4E32 /* AccessProviderManager */ = {
+			isa = PBXGroup;
+			children = (
+				D83CA7AE275A33AD006B4E32 /* AccessProviderManager.swift */,
+				D83CA7B0275A38B5006B4E32 /* AccessProviderProtocol.swift */,
+			);
+			path = AccessProviderManager;
+			sourceTree = "<group>";
+		};
+		D83CA7B2275A3A2E006B4E32 /* ListResponseModel */ = {
+			isa = PBXGroup;
+			children = (
+				D83CA7B3275A3A3D006B4E32 /* CharacterDataResponse.swift */,
+			);
+			path = ListResponseModel;
+			sourceTree = "<group>";
+		};
+		D83CA7B5275A3C3B006B4E32 /* ListRequestModel */ = {
+			isa = PBXGroup;
+			children = (
+				D83CA7B6275A3C68006B4E32 /* CharacterDataRequest.swift */,
+				D83CA7B9275A3F68006B4E32 /* CharacterDetailRequest.swift */,
+			);
+			path = ListRequestModel;
+			sourceTree = "<group>";
+		};
+		D83CA7BD275A47ED006B4E32 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D83CA7B2275A3A2E006B4E32 /* ListResponseModel */,
+				D83CA7B5275A3C3B006B4E32 /* ListRequestModel */,
+				D83CA7BE275A47FE006B4E32 /* PaginationInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D83CA7C0275A487A006B4E32 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D83CA7C1275A4887006B4E32 /* CharacterListServiceProvider.swift */,
+				D83CA7C3275A4894006B4E32 /* CharacterDetailServiceProvider.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D83CA7C5275A489C006B4E32 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D83CA7C8275A48AB006B4E32 /* EndointManager */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D83CA7C8275A48AB006B4E32 /* EndointManager */ = {
+			isa = PBXGroup;
+			children = (
+				D83CA7C6275A48A5006B4E32 /* EndpointManager.swift */,
+			);
+			path = EndointManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +239,10 @@
 			dependencies = (
 			);
 			name = "Marvel Code Case";
+			packageProductDependencies = (
+				D83CA7A7275A2885006B4E32 /* BaseComponents */,
+				D83CA7AA275A2892006B4E32 /* DefaultNetworkOperationPackage */,
+			);
 			productName = "Marvel Code Case";
 			productReference = D83CA76E275A24D7006B4E32 /* Marvel Code Case.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +314,10 @@
 				Base,
 			);
 			mainGroup = D83CA765275A24D7006B4E32;
+			packageReferences = (
+				D83CA7A6275A2885006B4E32 /* XCRemoteSwiftPackageReference "BaseComponents" */,
+				D83CA7A9275A2892006B4E32 /* XCRemoteSwiftPackageReference "DefaultNetworkOperationPackage" */,
+			);
 			productRefGroup = D83CA76F275A24D7006B4E32 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,10 +360,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D83CA7B1275A38B5006B4E32 /* AccessProviderProtocol.swift in Sources */,
+				D83CA7AF275A33AD006B4E32 /* AccessProviderManager.swift in Sources */,
+				D83CA7BF275A47FE006B4E32 /* PaginationInfo.swift in Sources */,
+				D83CA7C4275A4894006B4E32 /* CharacterDetailServiceProvider.swift in Sources */,
 				D83CA776275A24D7006B4E32 /* ViewController.swift in Sources */,
 				D83CA77C275A24D7006B4E32 /* Marvel_Code_Case.xcdatamodeld in Sources */,
 				D83CA772275A24D7006B4E32 /* AppDelegate.swift in Sources */,
+				D83CA7C2275A4887006B4E32 /* CharacterListServiceProvider.swift in Sources */,
+				D83CA7B7275A3C68006B4E32 /* CharacterDataRequest.swift in Sources */,
 				D83CA774275A24D7006B4E32 /* SceneDelegate.swift in Sources */,
+				D83CA7B4275A3A3D006B4E32 /* CharacterDataResponse.swift in Sources */,
+				D83CA7BA275A3F68006B4E32 /* CharacterDetailRequest.swift in Sources */,
+				D83CA7C7275A48A5006B4E32 /* EndpointManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,6 +697,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D83CA7A6275A2885006B4E32 /* XCRemoteSwiftPackageReference "BaseComponents" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/darkbringer1/BaseComponents.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.5;
+			};
+		};
+		D83CA7A9275A2892006B4E32 /* XCRemoteSwiftPackageReference "DefaultNetworkOperationPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/darkbringer1/DefaultNetworkOperationPackage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D83CA7A7275A2885006B4E32 /* BaseComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D83CA7A6275A2885006B4E32 /* XCRemoteSwiftPackageReference "BaseComponents" */;
+			productName = BaseComponents;
+		};
+		D83CA7AA275A2892006B4E32 /* DefaultNetworkOperationPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D83CA7A9275A2892006B4E32 /* XCRemoteSwiftPackageReference "DefaultNetworkOperationPackage" */;
+			productName = DefaultNetworkOperationPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D83CA77A275A24D7006B4E32 /* Marvel_Code_Case.xcdatamodeld */ = {
