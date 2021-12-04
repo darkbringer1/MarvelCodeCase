@@ -13,20 +13,20 @@ struct CharacterDataRequest: Codable {
     private(set) var offset: Int = 0
     private(set) var limit: Int = 30
     private(set) var ts: String
-    private(set) var apiKey: String
+    private(set) var apikey: String
     private(set) var hash: String
     
     init(characterId: Int? = nil,
          offset: Int = 0,
          limit: Int = 30,
          ts: String,
-         apiKey: String,
+         apikey: String,
          hash: String) {
         self.characterId = characterId
         self.offset = offset
         self.limit = limit
         self.ts = ts
-        self.apiKey = apiKey
+        self.apikey = apikey
         self.hash = hash
     }
     

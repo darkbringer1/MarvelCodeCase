@@ -17,14 +17,14 @@ class ContentDisplayerView: GenericBaseView<GenericDataProtocol> {
         view.layer.shadowOffset = CGSize(width: 0, height: 2)
         view.layer.shadowRadius = 4
         view.layer.shadowOpacity = 0.4
-        view.layer.cornerRadius = 6
+        view.layer.cornerRadius = 10
         return view
     }()
     
     private lazy var containerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.cornerRadius = 6
+        view.layer.cornerRadius = 10
         view.clipsToBounds = true
         view.backgroundColor = .white
         return view

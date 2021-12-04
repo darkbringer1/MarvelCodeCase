@@ -8,6 +8,7 @@
 import Foundation
 
 struct PaginationInfo {
+    
     var resultCount: Int = 0
     var limit: Int = 30
     var offset: Int = 0
