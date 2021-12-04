@@ -20,11 +20,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         
         self.window = UIWindow(windowScene: windowScene)
-        
-        let mainView = MainViewBuilder.build()
+        let mainView = SplashViewBuilder.build {
+            self.initializeMainView()
+        }
         
         window?.rootViewController = mainView
         window?.makeKeyAndVisible()
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -58,6 +60,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
-
+    private func initializeMainView() {
+        DispatchQueue.main.async {
+            UIView.transition(with: self.window!, duration: 0.3, options: .transitionCrossDissolve) {
+                self.fireMainView()
+            }
+        }
+        
+    }
+    private func fireMainView() {
+        let mainView = MainViewBuilder.build()
+        window?.rootViewController = mainView
+        window?.makeKeyAndVisible()
+    }
 }
 
