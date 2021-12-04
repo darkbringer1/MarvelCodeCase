@@ -21,8 +21,8 @@ protocol DataProviderProtocol: AnyObject {
 
 extension DataProviderProtocol {
     
-    func selectedItem(at index: Int) { }
-    func getMoreData() { }
-    func isLoadingCell(for index: Int) -> Bool { return false }
+//    func selectedItem(at index: Int) { }
+//    func getMoreData() { }
+//    func isLoadingCell(for index: Int) -> Bool { return false }
     
 }

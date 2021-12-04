@@ -28,7 +28,6 @@ class CharactersCollectionView: GenericBaseView<CharactersCollectionViewData> {
         return coll
     }()
     
-    //MARK: - EMPTY VIEW WILL BE CALLED FROM HERE
     
     override func setupViewConfigurations() {
         super.setupViewConfigurations()
@@ -59,8 +58,7 @@ class CharactersCollectionView: GenericBaseView<CharactersCollectionViewData> {
     }
     
     func isLoadingCell(for indexPath: IndexPath) -> Bool {
-//        return delegate?.isLoadingCell(for: indexPath.row) ?? false
-        return false
+        return dataProvider?.isLoadingCell(for: indexPath.row) ?? false
     }
     
 }
@@ -77,7 +75,7 @@ extension CharactersCollectionView: UICollectionViewDelegate, UICollectionViewDa
             return cell
         } else {
             guard let data = dataProvider?.askData(at: indexPath.row) else { fatalError("Please provide at least one item...")}
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharacterCollectionCell.identifier, for: indexPath) as? CharacterCollectionCell else { fatalError(" Please provide a registered cell...")}
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharacterCollectionCell.identifier, for: indexPath) as? CharacterCollectionCell else { fatalError("Please provide a registered cell...")}
             cell.setData(by: data)
             return cell
         }

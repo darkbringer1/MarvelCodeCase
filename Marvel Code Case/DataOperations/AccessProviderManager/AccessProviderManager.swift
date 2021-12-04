@@ -10,6 +10,12 @@ import CommonCrypto
 
 class AccessProviderManager: AccessProviderProtocol {
     
+    public static let shared = AccessProviderManager()
+    
+    private init() {
+        
+    }
+    
     private var hash = ""
     private let publicKey = "1960b982b0ca2b5b6a7d0bed9c36ee29"
     private let privateKey = "e23d3d945d927d2bf2a4bdffb796aeb442955547"

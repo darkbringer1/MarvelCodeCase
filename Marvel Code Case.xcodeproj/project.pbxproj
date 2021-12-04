@@ -40,6 +40,8 @@
 		D83CA7EF275A5570006B4E32 /* CharacterDisplayerViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA7EE275A5570006B4E32 /* CharacterDisplayerViewData.swift */; };
 		D83CA7F2275A6178006B4E32 /* DataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA7F1275A6178006B4E32 /* DataProviderProtocol.swift */; };
 		D83CA7F5275A6425006B4E32 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA7F4275A6425006B4E32 /* UIView+Extension.swift */; };
+		D83CA801275BEAE2006B4E32 /* MainViewDataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA800275BEAE2006B4E32 /* MainViewDataFormatter.swift */; };
+		D83CA803275BF23A006B4E32 /* MainViewDataFormatterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA802275BF23A006B4E32 /* MainViewDataFormatterProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		D83CA7EE275A5570006B4E32 /* CharacterDisplayerViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDisplayerViewData.swift; sourceTree = "<group>"; };
 		D83CA7F1275A6178006B4E32 /* DataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderProtocol.swift; sourceTree = "<group>"; };
 		D83CA7F4275A6425006B4E32 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		D83CA800275BEAE2006B4E32 /* MainViewDataFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewDataFormatter.swift; sourceTree = "<group>"; };
+		D83CA802275BF23A006B4E32 /* MainViewDataFormatterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewDataFormatterProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +264,8 @@
 			children = (
 				D83CA7CA275A4DD3006B4E32 /* MainViewController.swift */,
 				D83CA7CC275A4DF8006B4E32 /* MainViewModel.swift */,
+				D83CA800275BEAE2006B4E32 /* MainViewDataFormatter.swift */,
+				D83CA802275BF23A006B4E32 /* MainViewDataFormatterProtocol.swift */,
 				D83CA7CF275A4E12006B4E32 /* MainViewBuilder.swift */,
 			);
 			path = Scenes;
@@ -510,7 +516,9 @@
 				D83CA7CB275A4DD3006B4E32 /* MainViewController.swift in Sources */,
 				D83CA7DE275A526B006B4E32 /* ImageCacheManager.swift in Sources */,
 				D83CA7C2275A4887006B4E32 /* CharacterListServiceProvider.swift in Sources */,
+				D83CA801275BEAE2006B4E32 /* MainViewDataFormatter.swift in Sources */,
 				D83CA7B7275A3C68006B4E32 /* CharacterDataRequest.swift in Sources */,
+				D83CA803275BF23A006B4E32 /* MainViewDataFormatterProtocol.swift in Sources */,
 				D83CA7E2275A53DD006B4E32 /* LoadingCellComponent.swift in Sources */,
 				D83CA774275A24D7006B4E32 /* SceneDelegate.swift in Sources */,
 				D83CA7B4275A3A3D006B4E32 /* CharacterDataResponse.swift in Sources */,
