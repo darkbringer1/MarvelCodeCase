@@ -31,33 +31,33 @@ class ContentDisplayerView: GenericBaseView<GenericDataProtocol> {
     }()
     
     private lazy var mainStackView: UIStackView = {
-        let temp = UIStackView(arrangedSubviews: [imageContainer, infoView])
-        temp.translatesAutoresizingMaskIntoConstraints = false
-        temp.isUserInteractionEnabled = true
-        temp.alignment = .center
-        temp.distribution = .fill
-        temp.axis = .vertical
-        temp.spacing = 5
-        return temp
+        let stack = UIStackView(arrangedSubviews: [imageContainer, infoView])
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.isUserInteractionEnabled = true
+        stack.alignment = .center
+        stack.distribution = .fill
+        stack.axis = .vertical
+        stack.spacing = 5
+        return stack
     }()
     
     private lazy var imageContainer: CustomImageViewComponentContainer = {
-        let temp = CustomImageViewComponentContainer()
-        temp.translatesAutoresizingMaskIntoConstraints = false
-        temp.layer.cornerRadius = 2
-        temp.clipsToBounds = true
-        return temp
+        let image = CustomImageViewComponentContainer()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.layer.cornerRadius = 2
+        image.clipsToBounds = true
+        return image
     }()
     
     private lazy var infoView: UILabel = {
-        let temp = UILabel()
-        temp.translatesAutoresizingMaskIntoConstraints = false
-        temp.font = UIFont.boldSystemFont(ofSize: 14)
-        temp.textColor = .black
-        temp.text = " "
-        temp.contentMode = .top
-        temp.textAlignment = .left
-        return temp
+        let info = UILabel()
+        info.translatesAutoresizingMaskIntoConstraints = false
+        info.font = UIFont.boldSystemFont(ofSize: 14)
+        info.textColor = .black
+        info.text = " "
+        info.contentMode = .top
+        info.textAlignment = .left
+        return info
     }()
     
     override func addMajorViewComponents() {
