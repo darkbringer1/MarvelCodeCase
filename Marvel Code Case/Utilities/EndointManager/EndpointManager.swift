@@ -31,6 +31,7 @@ enum EndpointManager {
         
         case characters
         case detail(Int)
+        case comicList(Int)
         
         var value: String {
             switch self {
@@ -38,6 +39,8 @@ enum EndpointManager {
                     return "characters"
                 case .detail(let characterId):
                     return "characters/\(characterId)"
+                case .comicList(let characterId):
+                    return "characters/\(characterId)/comics"
             }
         }
     }
