@@ -13,7 +13,10 @@ class CharacterDetailViewBuilder {
         let formatter = CharacterDetailDataFormatter()
         let accessProviderManager = AccessProviderManager.shared
         let viewModel = CharacterDetailViewModel(formatter: formatter, data: data, accessProviderManager: accessProviderManager)
-        
-        return CharacterDetailViewController(viewModel: viewModel)
+        let viewController = CharacterDetailViewController(viewModel: viewModel)
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
+        viewController.navigationController?.navigationBar.standardAppearance = appearance
+        return viewController
     }
 }

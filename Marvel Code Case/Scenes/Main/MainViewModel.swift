@@ -103,9 +103,3 @@ extension MainViewModel: DataProviderProtocol {
     }
     
 }
-
-enum ViewState {
-    case loading
-    case done
-    case failed
-}

@@ -109,20 +109,3 @@ class CharacterDetailViewModel {
     }
     
 }
-
-class CharacterDetailViewRequest {
-    private(set) var id: Int
-    
-    init(id: Int) {
-        self.id = id
-    }
-}
-
-enum DetailViewState {
-    case charactersLoading
-    case charactersDone
-    case comicsLoading
-    case comicsDone
-    case done
-    case failed
-}

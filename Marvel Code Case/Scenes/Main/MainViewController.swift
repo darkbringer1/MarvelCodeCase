@@ -14,10 +14,10 @@ class MainViewController: BaseViewController<MainViewModel> {
     
     override func prepareViewControllerConfigurations() {
         super.prepareViewControllerConfigurations()
-        view.backgroundColor = .red
         addMainComponent()
         addViewModelListener()
     }
+    
     private func addMainComponent() {
         mainComponent = CharactersCollectionView()
         mainComponent.translatesAutoresizingMaskIntoConstraints = false
@@ -57,4 +57,6 @@ class MainViewController: BaseViewController<MainViewModel> {
         let viewController = CharacterDetailViewBuilder.build(with: data)
         navigationController?.pushViewController(viewController, animated: false)
     }
+    
+    
 }

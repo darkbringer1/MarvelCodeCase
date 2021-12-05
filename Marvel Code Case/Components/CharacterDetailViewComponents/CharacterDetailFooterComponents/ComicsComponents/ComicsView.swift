@@ -105,17 +105,18 @@ extension ComicsView: UICollectionViewDelegate, UICollectionViewDataSource, UICo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ContentDisplayerCollectionViewCell.identifier, for: indexPath) as? ContentDisplayerCollectionViewCell else { return UICollectionViewCell() }
-//        cell.setData(by: getItem(at: indexPath))
         cell.setRowData(data: getItem(at: indexPath))
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 180, height: 270)
+        let width = (UIScreen.main.bounds.width - 40) / 3
+        let height = (UIScreen.main.bounds.height) / 4
+        return CGSize(width: width, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 26, bottom: (500 - 320), right: 26)
+        return UIEdgeInsets(top: 26, left: 26, bottom: 52, right: 26)
     }
     
 }

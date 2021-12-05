@@ -60,6 +60,7 @@ class TitleContainerView: GenericBaseView<TitleContainerViewData> {
         super.loadDataView()
         guard let data = returnData() else { return }
         title.text = data.title
+        title.font = data.titleFont
     }
     
 }

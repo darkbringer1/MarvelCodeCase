@@ -43,7 +43,6 @@ class CharacterDetailDataFormatter: CharacterDetailDataFormatterProtocol {
                 name: $0.title)
             }))
         data = data.setComicsViewData(by: comics.setTitle(by: (comics.comicsData.count > 0) ? TitleContainerViewData(title: "Comics") : nil))
-//        comics.setTitle(by: (comics.comicsData.count > 0) ? TitleContainerViewData(title: "Comics") : nil)
         return comics
     }
 }

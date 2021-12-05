@@ -14,15 +14,10 @@ class CharacterDetailViewController: BaseViewController<CharacterDetailViewModel
     
     override func prepareViewControllerConfigurations() {
         super.prepareViewControllerConfigurations()
-        view.backgroundColor = .orange
         addMainComponent()
         viewModel.getCharacterData()
         viewModelListeners()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.transparentNavigationBar()
+        navigationController?.backgroundColor(.red)
     }
     
     private func addMainComponent() {
@@ -42,7 +37,6 @@ class CharacterDetailViewController: BaseViewController<CharacterDetailViewModel
         
     }
     
-    
     private func viewModelListeners() {
         viewModel.subscribeDataState { [weak self] data in
             self?.mainComponent.setData(by: data)
@@ -60,10 +54,3 @@ class CharacterDetailViewController: BaseViewController<CharacterDetailViewModel
     }
 }
 
-extension UINavigationController {
-    func transparentNavigationBar() {
-        self.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationBar.shadowImage = UIImage()
-        self.navigationBar.isTranslucent = true
-    }
-}
