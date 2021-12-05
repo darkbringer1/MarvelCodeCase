@@ -98,3 +98,11 @@ extension Extension {
         self = try Extension(rawValue: decoder.singleValueContainer().decode(RawValue.self)) ?? .unknown
     }
 }
+
+extension Thumbnail {
+    
+    func imageContentCreator() -> String {
+        return "\(self.path)/portrait_uncanny.\(self.thumbnailExtension)"
+    }
+    
+}

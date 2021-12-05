@@ -48,5 +48,13 @@ class MainViewController: BaseViewController<MainViewModel> {
                     return
             }
         }
+        viewModel.subscribeDetailViewState { [weak self] data in
+            self?.fireDetailView(with: data)
+        }
+    }
+    
+    private func fireDetailView(with data: CharacterDetailViewRequest) {
+        let viewController = CharacterDetailViewBuilder.build(with: data)
+        navigationController?.pushViewController(viewController, animated: false)
     }
 }

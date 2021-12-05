@@ -23,7 +23,7 @@ class CharactersCollectionView: GenericBaseView<CharactersCollectionViewData> {
         coll.translatesAutoresizingMaskIntoConstraints = false
         coll.delegate = self
         coll.dataSource = self
-        coll.register(CharacterCollectionCell.self, forCellWithReuseIdentifier: CharacterCollectionCell.identifier)
+        coll.register(CharacterCollectionViewCell.self, forCellWithReuseIdentifier: CharacterCollectionViewCell.identifier)
         coll.register(LoadingCellView.self, forCellWithReuseIdentifier: LoadingCellView.identifier)
         return coll
     }()
@@ -75,7 +75,7 @@ extension CharactersCollectionView: UICollectionViewDelegate, UICollectionViewDa
             return cell
         } else {
             guard let data = dataProvider?.askData(at: indexPath.row) else { fatalError("Please provide at least one item...")}
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharacterCollectionCell.identifier, for: indexPath) as? CharacterCollectionCell else { fatalError("Please provide a registered cell...")}
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharacterCollectionViewCell.identifier, for: indexPath) as? CharacterCollectionViewCell else { fatalError("Please provide a registered cell...")}
             cell.setData(by: data)
             return cell
         }
@@ -99,7 +99,7 @@ extension CharactersCollectionView: UICollectionViewDelegate, UICollectionViewDa
 
 extension CharactersCollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (UIScreen.main.bounds.width - 50) / 2
+        let width = (UIScreen.main.bounds.width - 40) / 2
         let height = (UIScreen.main.bounds.height) / 3
         return CGSize(width: width, height: height)
     }

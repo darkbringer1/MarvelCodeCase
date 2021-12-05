@@ -9,11 +9,15 @@ import Foundation
 import BaseComponents
 import DefaultNetworkOperationPackage
 
+typealias CharacterDetailRequestBlock = (CharacterDetailViewRequest) -> Void
+
 class MainViewModel {
     
     private var dataFormatter: MainViewDataFormatterProtocol
     private var accessProviderManager: AccessProviderProtocol
     private var mainViewState: ((ViewState) -> Void)?
+    private var detailViewState: CharacterDetailRequestBlock?
+    
     
     init(dataFormatter: MainViewDataFormatterProtocol,
          accessProviderManager: AccessProviderProtocol) {
@@ -33,6 +37,10 @@ class MainViewModel {
     
     func subscribeViewState(with completion: @escaping (ViewState) -> Void) {
         mainViewState = completion
+    }
+    
+    func subscribeDetailViewState(with completion: @escaping CharacterDetailRequestBlock) {
+        detailViewState = completion
     }
     
     private lazy var dataListener: (Result<CharacterDataResponse, ErrorResponse>) -> Void = { [weak self] result in
@@ -91,6 +99,7 @@ extension MainViewModel: DataProviderProtocol {
     
     func selectedItem(at index: Int) {
         print("tapped index: \(index)")
+        detailViewState?(CharacterDetailViewRequest(id: dataFormatter.getItemId(at: index)))
     }
     
 }
