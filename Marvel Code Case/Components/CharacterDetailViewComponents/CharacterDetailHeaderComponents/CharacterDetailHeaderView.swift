@@ -20,7 +20,9 @@ class CharacterDetailHeaderView: GenericBaseView<CharacterDetailHeaderViewData> 
     
     override func addMajorViewComponents() {
         super.addMajorViewComponents()
+        addComponents()
     }
+    
     private func addComponents() {
         addSubview(imageContainer)
         
