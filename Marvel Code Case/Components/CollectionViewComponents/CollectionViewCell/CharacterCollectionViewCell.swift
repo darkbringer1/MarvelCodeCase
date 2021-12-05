@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import BaseComponents
 
-class CharacterCollectionCell: BaseCollectionViewCell {
+class CharacterCollectionViewCell: BaseCollectionViewCell {
     
     private lazy var contentDisplayer: ContentDisplayerView = {
         let temp = ContentDisplayerView()

@@ -23,6 +23,7 @@ class CharacterDetailView: GenericBaseView<CharacterDetailViewData> {
         collection.showsHorizontalScrollIndicator = false
         collection.register(CharacterDetailViewCell.self, forCellWithReuseIdentifier: CharacterDetailViewCell.identifier)
         collection.register(CharacterHeaderReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CharacterHeaderReusableView.identifier)
+        collection.register(CharacterDetailFooterResuableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: CharacterDetailFooterResuableView.identifier)
         return collection
     }()
     
@@ -30,7 +31,9 @@ class CharacterDetailView: GenericBaseView<CharacterDetailViewData> {
         super.addMajorViewComponents()
         addCollectionView()
     }
+    
     private func addCollectionView() {
+        
         addSubview(collectionView)
         
         NSLayoutConstraint.activate([
@@ -38,27 +41,35 @@ class CharacterDetailView: GenericBaseView<CharacterDetailViewData> {
             collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
             collectionView.topAnchor.constraint(equalTo: topAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
         ])
-        
     }
     
+    func reloadCollectionView() {
+        DispatchQueue.main.async { [weak self] in
+            self?.collectionView.reloadData()
+        }
+    }
     private func setData(to header: CharacterHeaderReusableView) {
         guard let data = returnData(), let headerViewData = data.headerViewData else { return }
         header.setRowData(data: headerViewData)
     }
     
-    override func loadDataView() {
-        super.loadDataView()
-        DispatchQueue.main.async {
-            self.collectionView.reloadData()
-        }
+    private func setData(to footer: CharacterDetailFooterResuableView) {
+        guard let data = returnData(), let footerViewData = data.comicsViewData else { return }
+        footer.setRowData(data: footerViewData)
     }
+    
     
     private func getItem(at index: IndexPath) -> TitleViewData {
         guard let data = returnData() else { fatalError("please provide data..")}
-        return data.titleViewData
+        return data.titleViewData[index.row]
+    }
+    
+    private func getNumberOfItems() -> Int {
+        guard let data = returnData() else { return 0 }
+        return data.titleViewData.count
     }
     
 }
@@ -71,6 +82,10 @@ extension CharacterDetailView: UICollectionViewDelegate, UICollectionViewDataSou
                 guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CharacterHeaderReusableView.identifier, for: indexPath) as? CharacterHeaderReusableView else { return UICollectionReusableView() }
                 setData(to: header)
                 return header
+            case UICollectionView.elementKindSectionFooter:
+                guard let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CharacterDetailFooterResuableView.identifier, for: indexPath) as? CharacterDetailFooterResuableView else { return UICollectionReusableView() }
+                setData(to: footer)
+                return footer
             default:
                 assert(false, "unexpected element kind")
         }
@@ -79,9 +94,12 @@ extension CharacterDetailView: UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width, height: 340)
     }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.width, height: 340)
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return getNumberOfItems()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
