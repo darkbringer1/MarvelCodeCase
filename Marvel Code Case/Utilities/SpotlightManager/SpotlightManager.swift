@@ -27,16 +27,23 @@ enum SpotlightManager {
                                    keywords: [
                                     "marvel heroes",
                                     "marvel",
-                                    "heroes",
-                                    "captain america",
-                                    "thor",
-                                    "iron man",
-                                    "hulk",
-                                    "antman"
+                                    "heroes"
                                    ])
+
+        let match2 = SpotlightModel(id: "1",
+                                    title: "Marvel Characters",
+                                    content: "Tap to see your favourite Marvel Character",
+                                    keywords: [
+                                        "captain america",
+                                        "thor",
+                                        "iron man",
+                                        "hulk",
+                                        "antman"
+                                    ])
 
         var matches: [SpotlightModel] = []
         matches.append(match)
+        matches.append(match2)
 
         let searchableItems = matches.map { item -> CSSearchableItem in
             let attributeSet: CSSearchableItemAttributeSet
