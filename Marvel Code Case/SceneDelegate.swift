@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreSpotlight
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -23,10 +24,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let mainView = SplashViewBuilder.build {
             self.initializeMainView()
         }
-        
+
+        SpotlightManager.configureSearchableItems()
+
         window?.rootViewController = mainView
         window?.makeKeyAndVisible()
-        
+    }
+
+    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+        if userActivity.activityType == CSSearchableItemActionType {
+            if let uid = userActivity.userInfo?[CSSearchableItemActivityIdentifier] as? String {
+                debugPrint("indexed item id: \(uid)")
+            }
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
