@@ -73,6 +73,7 @@
 		D83CA84F275D7037006B4E32 /* CharacterDetailViewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA84E275D7037006B4E32 /* CharacterDetailViewRequest.swift */; };
 		D83CA852275D704F006B4E32 /* DetailViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA851275D704F006B4E32 /* DetailViewState.swift */; };
 		D83CA854275D7059006B4E32 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83CA853275D7059006B4E32 /* ViewState.swift */; };
+		F06D9A71287D4DCD0049E156 /* SpotlightManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D9A70287D4DCD0049E156 /* SpotlightManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,7 @@
 		D83CA84E275D7037006B4E32 /* CharacterDetailViewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewRequest.swift; sourceTree = "<group>"; };
 		D83CA851275D704F006B4E32 /* DetailViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewState.swift; sourceTree = "<group>"; };
 		D83CA853275D7059006B4E32 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		F06D9A70287D4DCD0049E156 /* SpotlightManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +291,7 @@
 		D83CA7C5275A489C006B4E32 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F06D9A6F287D4DC00049E156 /* SpotlightManager */,
 				D83CA850275D7046006B4E32 /* ViewStates */,
 				D83CA849275D6971006B4E32 /* ColorHelper */,
 				D83CA7F3275A641C006B4E32 /* Extensions */,
@@ -572,6 +575,14 @@
 			path = ViewStates;
 			sourceTree = "<group>";
 		};
+		F06D9A6F287D4DC00049E156 /* SpotlightManager */ = {
+			isa = PBXGroup;
+			children = (
+				F06D9A70287D4DCD0049E156 /* SpotlightManager.swift */,
+			);
+			path = SpotlightManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -744,6 +755,7 @@
 				D83CA77C275A24D7006B4E32 /* Marvel_Code_Case.xcdatamodeld in Sources */,
 				D83CA7DB275A51C4006B4E32 /* CustomImageViewComponent.swift in Sources */,
 				D83CA825275CFA99006B4E32 /* CharacterDetailViewController.swift in Sources */,
+				F06D9A71287D4DCD0049E156 /* SpotlightManager.swift in Sources */,
 				D83CA7D0275A4E12006B4E32 /* MainViewBuilder.swift in Sources */,
 				D83CA83D275D45E4006B4E32 /* ContentDisplayerCollectionViewCell.swift in Sources */,
 				D83CA7CB275A4DD3006B4E32 /* MainViewController.swift in Sources */,
