@@ -1,25 +1,23 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "BaseComponents",
-        "repositoryURL": "https://github.com/darkbringer1/BaseComponents.git",
-        "state": {
-          "branch": null,
-          "revision": "db1615692f13bb4bdcc8967838cddea42a129486",
-          "version": "1.2.5"
-        }
-      },
-      {
-        "package": "DefaultNetworkOperationPackage",
-        "repositoryURL": "https://github.com/darkbringer1/DefaultNetworkOperationPackage.git",
-        "state": {
-          "branch": null,
-          "revision": "ea305d8fbe084e5f34036b4fd10d809d912363ad",
-          "version": "1.2.0"
-        }
+  "pins" : [
+    {
+      "identity" : "basecomponents",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/darkbringer1/BaseComponents.git",
+      "state" : {
+        "revision" : "db1615692f13bb4bdcc8967838cddea42a129486",
+        "version" : "1.2.5"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "defaultnetworkoperationpackage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/darkbringer1/DefaultNetworkOperationPackage.git",
+      "state" : {
+        "revision" : "ea305d8fbe084e5f34036b4fd10d809d912363ad",
+        "version" : "1.2.0"
+      }
+    }
+  ],
+  "version" : 2
 }
