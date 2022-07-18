@@ -9,13 +9,6 @@ import UIKit
 import CoreSpotlight
 import MobileCoreServices
 
-struct SpotlightModel {
-    let id: String
-    var title: String
-    var content: String
-    var keywords: [String]
-}
-
 enum SpotlightManager {
     static let domainIdentifier = "com.dogukaan.Marvel-Code-Case"
 

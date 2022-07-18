@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct SpotlightModel {
+    let id: String
+    var title: String
+    var content: String
+    var keywords: [String]
+}
